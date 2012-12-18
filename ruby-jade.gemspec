@@ -7,10 +7,10 @@ Gem::Specification.new do |gem|
   gem.name          = "ruby-jade"
   gem.version       = Ruby::Jade::VERSION
   gem.authors       = ["Ryan Fitzgerald"]
-  gem.email         = ["rwfitzge@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.email         = ["rfitz@academia.edu"]
+  gem.description   = %q{Ruby wrapper for the Jade templating language}
+  gem.summary       = %q{Ruby wrapper for the Jade templating language}
+  gem.homepage      = "https://github.com/academia-edu/ruby-jade"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

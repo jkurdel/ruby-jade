@@ -1,29 +1,8 @@
-# Ruby::Jade
+This is a simple wrapper for version 0.27.7 of Jade. It lets you precompile
+Jade templates for use in the browser, although you also need to load
+[this file](https://github.com/visionmedia/jade/blob/master/runtime.min.js)
+on the client first.
 
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'ruby-jade'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install ruby-jade
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+``` ruby
+Jade.compile("html\n  div Hello!") # returns a JS function
+```
