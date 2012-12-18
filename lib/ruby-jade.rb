@@ -19,7 +19,8 @@ module Jade
       end
     end
 
-    def compile(template, options = {:client => true})
+    def compile(template, options = {})
+      options = {:client => true, :compileDebug => false}.merge(options)
       context.call('compile', template, options)
     end
   end
