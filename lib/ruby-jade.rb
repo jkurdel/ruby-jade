@@ -12,8 +12,12 @@ module Jade
         ExecJS.compile <<-JS
           var window = {};
           #{File.read(path)}
+          var jade = window.jade;
           var compile = function (template, options) {
-            return window.jade.compile(template, options).toString();
+            return jade.compile(template, options).toString();
+          }
+          var render = function (template, options, locals) {
+            return jade.compile(template, options)(locals, {}, {}, {}, {});
           }
         JS
       end
@@ -23,5 +27,11 @@ module Jade
       options = {:client => true, :compileDebug => false}.merge(options)
       context.call('compile', template, options)
     end
+
+    def render(template, options = {}, locals = {})
+      options = {:client => true, :compileDebug => false}.merge(options)
+      context.call('render', template, options, locals)
+    end
+
   end
 end
