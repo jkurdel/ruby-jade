@@ -1,4 +1,4 @@
-This is a simple wrapper for version 0.27.7 of Jade. 
+This is a simple wrapper for version 1.11.0 of Jade. 
 
 It lets you:
 
